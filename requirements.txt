@@ -1,0 +1,2 @@
+# No external Python packages required.
+# The project pipeline uses Python standard library modules only.

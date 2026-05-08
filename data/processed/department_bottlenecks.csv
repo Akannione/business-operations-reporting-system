@@ -1,0 +1,8 @@
+department,total_requests,open_requests,avg_response_hours,avg_resolution_hours,first_response_sla_pct,resolution_sla_pct,rework_pct,avg_satisfaction,estimated_margin
+Systems Operations,90,37,3.46,21.54,97.8,98.9,20.0,4.16,41644.92
+Admin Operations,77,30,3.52,18.25,96.1,97.4,10.4,4.25,9194.26
+Billing,140,42,3.69,17.75,96.4,97.9,15.7,4.21,21193.01
+Data & Reporting,128,46,3.4,14.61,93.8,100.0,18.8,4.21,54659.48
+IT Support,47,18,3.38,14.36,93.6,97.9,8.5,4.33,9878.53
+Scheduling,69,30,3.37,12.47,100.0,98.6,8.7,4.26,6970.47
+Client Success,89,26,3.42,11.92,93.3,100.0,11.2,4.3,15350.01

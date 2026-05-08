@@ -1,0 +1,7 @@
+channel,total_requests,avg_response_hours,first_response_sla_pct,rework_pct,avg_satisfaction
+Email,219,4.39,92.7,16.9,4.19
+Web Form,176,2.99,97.7,11.9,4.24
+Phone,102,2.47,98.0,14.7,4.29
+Walk-In,64,2.65,96.9,12.5,4.28
+Referral,59,3.89,96.6,11.9,4.23
+Unknown,20,4.62,95.0,20.0,4.2

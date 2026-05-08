@@ -1,0 +1,2 @@
+total_requests,closed_requests,open_requests,avg_response_hours,avg_resolution_hours,first_response_sla_pct,resolution_sla_pct,rework_pct,avg_satisfaction,revenue_supported,estimated_margin
+640,411,229,3.49,16.03,95.8,98.8,14.4,4.23,264625.08,158890.68

@@ -1,0 +1,12 @@
+request_type,request_count,avg_response_hours,avg_resolution_hours,rework_pct,revenue_supported,estimated_margin
+Dashboard Request,61,3.16,13.0,13.1,57336.11,34794.15
+Automation Request,35,3.34,22.95,8.6,45297.3,28294.0
+Data Export,62,3.76,15.6,24.2,31827.3,18456.78
+Service Follow-Up,87,3.44,11.93,10.3,24847.7,14939.58
+Intake Form Issue,54,3.56,20.62,27.8,22672.67,13146.38
+Invoice Correction,56,3.74,16.86,14.3,17136.57,10751.77
+Billing Question,81,3.68,18.77,16.0,17837.14,10018.78
+Account Setup,45,3.38,10.84,8.9,15486.62,9310.02
+Vendor Record Update,74,3.45,15.73,10.8,14519.05,8837.68
+Appointment Change,65,3.35,11.16,7.7,10841.75,6538.42
+General Request,20,3.18,34.21,20.0,6822.87,3803.12

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Business Operations Reporting Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #607085;
+      --line: #d8dee8;
+      --bg: #f5f7fa;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #b45309;
+      --accent-3: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 34px clamp(20px, 5vw, 64px);
+    }
+    header p { color: #cbd5e1; max-width: 840px; margin: 8px 0 0; }
+    main { padding: 28px clamp(20px, 5vw, 64px) 48px; }
+    h1, h2 { margin: 0; letter-spacing: 0; }
+    h2 { font-size: 1.1rem; margin-bottom: 14px; }
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    .kpis {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 650;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      display: block;
+      margin-top: 6px;
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      font-weight: 760;
+    }
+    .two-col {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: start;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(120px, 180px) 1fr 56px;
+      align-items: center;
+      gap: 10px;
+      margin: 11px 0;
+      font-size: .91rem;
+    }
+    .track {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: inherit;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-size: .78rem; text-transform: uppercase; }
+    .recommendations {
+      border-left: 4px solid var(--accent);
+    }
+    .recommendations li { margin-bottom: 8px; }
+    @media (max-width: 640px) {
+      .bar-row { grid-template-columns: 1fr; gap: 5px; }
+      table { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Business Operations Reporting Dashboard</h1>
+    <p>Business Admin + CIST case study: cleaned messy service operations data, analyzed bottlenecks with SQL, and created a repeatable reporting dashboard for weekly management decisions.</p>
+  </header>
+  <main>
+    <section class="grid kpis">
+      <div class="card"><span class="metric-label">Requests Analyzed</span><span class="metric-value">640</span></div>
+      <div class="card"><span class="metric-label">Open Backlog</span><span class="metric-value">229</span></div>
+      <div class="card"><span class="metric-label">First Response SLA</span><span class="metric-value">95.8%</span></div>
+      <div class="card"><span class="metric-label">Rework Rate</span><span class="metric-value">14.4%</span></div>
+      <div class="card"><span class="metric-label">Avg Satisfaction</span><span class="metric-value">4.23/5</span></div>
+      <div class="card"><span class="metric-label">Margin Supported</span><span class="metric-value">$158,891</span></div>
+    </section>
+
+    <section class="grid two-col">
+      <div class="card">
+        <h2>Department Resolution Bottlenecks</h2>
+        
+    <div class="bar-row">
+      <span>Systems Operations</span>
+      <div class="track"><div class="fill" style="width:100.0%"></div></div>
+      <strong>21.5</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Admin Operations</span>
+      <div class="track"><div class="fill" style="width:84.7%"></div></div>
+      <strong>18.2</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Billing</span>
+      <div class="track"><div class="fill" style="width:82.4%"></div></div>
+      <strong>17.8</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Data & Reporting</span>
+      <div class="track"><div class="fill" style="width:67.8%"></div></div>
+      <strong>14.6</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>IT Support</span>
+      <div class="track"><div class="fill" style="width:66.7%"></div></div>
+      <strong>14.4</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Scheduling</span>
+      <div class="track"><div class="fill" style="width:57.9%"></div></div>
+      <strong>12.5</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Client Success</span>
+      <div class="track"><div class="fill" style="width:55.3%"></div></div>
+      <strong>11.9</strong>
+    </div>
+    
+      </div>
+      <div class="card">
+        <h2>Highest-Value Request Types</h2>
+        
+    <div class="bar-row">
+      <span>Dashboard Request</span>
+      <div class="track"><div class="fill" style="width:100.0%"></div></div>
+      <strong>34794.2</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Automation Request</span>
+      <div class="track"><div class="fill" style="width:81.3%"></div></div>
+      <strong>28294.0</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Data Export</span>
+      <div class="track"><div class="fill" style="width:53.0%"></div></div>
+      <strong>18456.8</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Service Follow-Up</span>
+      <div class="track"><div class="fill" style="width:42.9%"></div></div>
+      <strong>14939.6</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Intake Form Issue</span>
+      <div class="track"><div class="fill" style="width:37.8%"></div></div>
+      <strong>13146.4</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Invoice Correction</span>
+      <div class="track"><div class="fill" style="width:30.9%"></div></div>
+      <strong>10751.8</strong>
+    </div>
+    
+
+    <div class="bar-row">
+      <span>Billing Question</span>
+      <div class="track"><div class="fill" style="width:28.8%"></div></div>
+      <strong>10018.8</strong>
+    </div>
+    
+      </div>
+    </section>
+
+    <section class="grid two-col" style="margin-top:16px;">
+      <div class="card">
+        <h2>Last 8 Weeks</h2>
+        <table>
+          <thead><tr><th>Week</th><th>Req.</th><th>Open</th><th>Resp Hrs</th><th>SLA</th><th>Rework</th><th>Sat.</th></tr></thead>
+          <tbody>
+        <tr>
+          <td>2026-03-02</td>
+          <td>44</td>
+          <td>15</td>
+          <td>2.94</td>
+          <td>95.5%</td>
+          <td>15.9%</td>
+          <td>4.3</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-03-09</td>
+          <td>51</td>
+          <td>20</td>
+          <td>3.56</td>
+          <td>92.2%</td>
+          <td>3.9%</td>
+          <td>4.27</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-03-16</td>
+          <td>36</td>
+          <td>9</td>
+          <td>3.15</td>
+          <td>100.0%</td>
+          <td>16.7%</td>
+          <td>4.2</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-03-23</td>
+          <td>44</td>
+          <td>15</td>
+          <td>3.59</td>
+          <td>95.5%</td>
+          <td>18.2%</td>
+          <td>4.24</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-03-30</td>
+          <td>38</td>
+          <td>12</td>
+          <td>3.13</td>
+          <td>100.0%</td>
+          <td>26.3%</td>
+          <td>4.22</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-04-06</td>
+          <td>37</td>
+          <td>17</td>
+          <td>3.42</td>
+          <td>94.6%</td>
+          <td>5.4%</td>
+          <td>4.26</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-04-13</td>
+          <td>29</td>
+          <td>11</td>
+          <td>3.18</td>
+          <td>96.6%</td>
+          <td>20.7%</td>
+          <td>4.18</td>
+        </tr>
+        
+
+        <tr>
+          <td>2026-04-20</td>
+          <td>25</td>
+          <td>11</td>
+          <td>4.33</td>
+          <td>92.0%</td>
+          <td>16.0%</td>
+          <td>4.26</td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>Channel Performance</h2>
+        <table>
+          <thead><tr><th>Channel</th><th>Req.</th><th>Resp Hrs</th><th>SLA</th><th>Rework</th><th>Sat.</th></tr></thead>
+          <tbody>
+        <tr>
+          <td>Email</td>
+          <td>219</td>
+          <td>4.39</td>
+          <td>92.7%</td>
+          <td>16.9%</td>
+          <td>4.19</td>
+        </tr>
+        
+
+        <tr>
+          <td>Web Form</td>
+          <td>176</td>
+          <td>2.99</td>
+          <td>97.7%</td>
+          <td>11.9%</td>
+          <td>4.24</td>
+        </tr>
+        
+
+        <tr>
+          <td>Phone</td>
+          <td>102</td>
+          <td>2.47</td>
+          <td>98.0%</td>
+          <td>14.7%</td>
+          <td>4.29</td>
+        </tr>
+        
+
+        <tr>
+          <td>Walk-In</td>
+          <td>64</td>
+          <td>2.65</td>
+          <td>96.9%</td>
+          <td>12.5%</td>
+          <td>4.28</td>
+        </tr>
+        
+
+        <tr>
+          <td>Referral</td>
+          <td>59</td>
+          <td>3.89</td>
+          <td>96.6%</td>
+          <td>11.9%</td>
+          <td>4.23</td>
+        </tr>
+        
+
+        <tr>
+          <td>Unknown</td>
+          <td>20</td>
+          <td>4.62</td>
+          <td>95.0%</td>
+          <td>20.0%</td>
+          <td>4.2</td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card recommendations" style="margin-top:16px;">
+      <h2>Management Recommendations</h2>
+      <ul>
+        <li>Create intake templates for Data & Reporting and Systems Operations requests, where resolution time and rework are highest.</li>
+        <li>Move repeat billing and vendor updates into a weekly batch workflow to reduce context switching for admin staff.</li>
+        <li>Use the dashboard as a Monday operating review: backlog, SLA misses, rework causes, and high-value automation opportunities.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
