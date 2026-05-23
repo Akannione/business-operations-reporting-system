@@ -1,26 +1,26 @@
-# Screenshot Folder
+# Screenshot Assets
 
-Add portfolio screenshots here before publishing the project publicly.
+These images provide quick visual proof for the portfolio README and LinkedIn/project-page previews.
 
-Recommended files:
+## Included
 
-- `portfolio_showcase.png`: top section of the case study page.
-- `dashboard_kpis.png`: dashboard KPI cards.
-- `department_bottlenecks.png`: department bottleneck section.
-- `weekly_metrics.png`: weekly metrics table.
-- `github_readme_preview.png`: GitHub README preview after upload.
+- `dashboard_excel_preview.png`: main Excel dashboard view with KPI cards and charts.
+- `kpi_summary_excel_preview.png`: KPI summary worksheet preview.
+- `department_bottlenecks_excel_preview.png`: department bottleneck analysis preview.
+- `request_type_roi_excel_preview.png`: request-type value and margin analysis preview.
+- `weekly_metrics_excel_preview.png`: weekly operating metrics preview.
 
-Use screenshots in:
+## Usage
+
+Use these screenshots in:
 
 - GitHub README
-- LinkedIn project post
-- LinkedIn Featured section
-- Professional portfolio items
-- Personal portfolio website
+- LinkedIn Featured/project post
+- professional portfolio site
+- job application project summaries
 
 Quality rules:
 
-- Make sure text is readable.
-- Crop out browser clutter if possible.
-- Use light mode if it improves clarity.
-- Do not include private local file paths in public screenshots.
+- Keep text readable.
+- Avoid private local paths in screenshots.
+- Lead with the dashboard preview, then use detail views only when more proof is needed.
