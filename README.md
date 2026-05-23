@@ -8,6 +8,11 @@ I built a repeatable reporting system that takes messy business operations data,
 
 This project shows practical business systems ability: not just charts, but a workflow that helps an operations manager understand backlog, response speed, rework, satisfaction, margin, and where automation should be prioritized.
 
+## Live Preview
+
+- [Portfolio showcase](https://akannione.github.io/business-operations-reporting-system/reports/portfolio_showcase.html)
+- [Operations dashboard](https://akannione.github.io/business-operations-reporting-system/reports/operations_dashboard.html)
+
 ## Visual Proof
 
 ![Business operations Excel dashboard preview](assets/screenshots/dashboard_excel_preview.png)
@@ -19,10 +24,10 @@ Additional dashboard evidence:
 - [Request type ROI preview](assets/screenshots/request_type_roi_excel_preview.png)
 - [Weekly metrics preview](assets/screenshots/weekly_metrics_excel_preview.png)
 
-Open the generated outputs:
+Open the generated outputs in GitHub:
 
-- [Portfolio showcase](reports/portfolio_showcase.html)
-- [Operations dashboard](reports/operations_dashboard.html)
+- [Portfolio showcase source](reports/portfolio_showcase.html)
+- [Operations dashboard source](reports/operations_dashboard.html)
 - [Excel dashboard workbook](reports/business_operations_reporting_dashboard.xlsx)
 - [Executive summary](reports/executive_summary.md)
 
