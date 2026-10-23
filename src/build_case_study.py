@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import math
 import random
 import sqlite3
 from collections import defaultdict
@@ -216,7 +217,7 @@ def parse_float(value: str) -> float | None:
         parsed = float((value or "").strip().replace("$", "").replace(",", ""))
     except ValueError:
         return None
-    return parsed if parsed >= 0 else None
+    return parsed if math.isfinite(parsed) and parsed >= 0 else None
 
 
 def parse_bool(value: str) -> int:
@@ -267,9 +268,15 @@ def clean_dataset(raw_rows: list[dict[str, str]]) -> list[dict]:
         if status != "Closed":
             resolution_hours = 0.0
 
-        revenue_value = parse_float(raw.get("revenue_value", "")) or REQUEST_TYPES.get(request_type, {}).get("base_value", 250)
-        cost_estimate = parse_float(raw.get("cost_estimate", "")) or revenue_value * 0.35
-        satisfaction_score = parse_float(raw.get("satisfaction_score", "")) or 3.8
+        revenue_value = parse_float(raw.get("revenue_value", ""))
+        if revenue_value is None:
+            revenue_value = REQUEST_TYPES.get(request_type, {}).get("base_value", 250)
+        cost_estimate = parse_float(raw.get("cost_estimate", ""))
+        if cost_estimate is None:
+            cost_estimate = revenue_value * 0.35
+        satisfaction_score = parse_float(raw.get("satisfaction_score", ""))
+        if satisfaction_score is None:
+            satisfaction_score = 3.8
         satisfaction_score = min(5.0, max(1.0, satisfaction_score))
 
         response_sla = {"Urgent": 2, "High": 4, "Normal": 8, "Low": 16}.get(priority, 8)
